@@ -1,0 +1,17 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov 20 13:31:01 2020
+
+@author: uha18
+"""
+
+def euclgcd(m,n):
+    if m<n:
+        return euclgcd(n,m) #just to avoid exceptions if the first number is greater than the second one
+    else:
+        while n != 0:
+            (m,n) = (n, m%n)
+        return (m)
+m = int(input("First number:"))
+n = int(input('Second number:'))
+print ('The greatest common devisor is: {0}'.format(euclgcd(m, n)))
